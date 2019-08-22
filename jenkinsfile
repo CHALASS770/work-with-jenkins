@@ -1,4 +1,5 @@
-node {
+pipeline {
+    agent any
     stage("checkout"){
         git "https://github.com/CHALASS770/work-with-jenkins.git"
     }
