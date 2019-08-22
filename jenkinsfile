@@ -1,10 +1,15 @@
 pipeline {
     agent any
+    stages {
     stage("checkout"){
-        git "https://github.com/CHALASS770/work-with-jenkins.git"
+        step{
+            git "https://github.com/CHALASS770/work-with-jenkins.git"
+    }
     }
     stage("run 1.py"){
-        sh "python3.7 1.py"
+        step{
+            sh "python3.7 1.py"
     }
-    
+    }
+}
 }
